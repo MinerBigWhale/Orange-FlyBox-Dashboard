@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 
 from influxdb import InfluxDBClient
 from influxdb import SeriesHelper
