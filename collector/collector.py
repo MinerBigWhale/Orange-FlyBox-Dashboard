@@ -2,6 +2,8 @@
 from influxdb import InfluxDBClient
 from influxdb import SeriesHelper
 from xml.etree import ElementTree
+import requests
+import time
 
 # InfluxDB connections settings
 host = "localhost"
@@ -47,6 +49,27 @@ class SimpleXmlParser:
     def parse(text):
         xml = ElementTree.fromstring(text)
         return SimpleXmlParser.get_child(xml)
+
+
+def get_limit():
+    url = "http://192.168.1.1/api/monitoring/start_date"
+    response = requests.get(url)
+    xml = SimpleXmlParser.parse(response.content)
+    return {
+        "start" : int(xml["StartDay"]),
+        "limit" : float(xml["trafficmaxlimit"]) /1024/1024/1024
+    }
+
+def get_usage():
+    url = "http://192.168.1.1/api/monitoring/month_statistics"
+    response = requests.get(url)
+    xml = SimpleXmlParser.parse(response.content)
+    return {
+        "download" : float(xml["CurrentMonthDownload"]) /1024/1024/1024,
+        "upload" : float(xml["CurrentMonthUpload"]) /1024/1024/1024,
+        "duration" : float(xml["MonthDuration"])
+    }
+
 
 """Starting the loop"""
 while True:
