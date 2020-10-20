@@ -23,17 +23,8 @@ Home
 
 ![Dashboard](https://github.com/MinerBigWhale/orange-flybox-monitor/raw/master/public/dashboard.png)
 
-## Installation
-You’ll need to have Node 8.16.0 or Node 10.16.0 or later version on your local development machine (but it’s not required on the server). You can use nvm (macOS/Linux) or nvm-windows to switch Node versions between different projects.
-
-```bash
-npm install
-```
-
-## Usage
-```bash
-npm start
-```
+## Installation & Usage 
+[Collector](https://github.com/MinerBigWhale/orange-flybox-monitor/raw/master/collector/README.md)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
