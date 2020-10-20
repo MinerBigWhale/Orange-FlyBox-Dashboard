@@ -1,12 +1,12 @@
 # Orange FlyBox Dashboard 📈
 
-![license](https://img.shields.io/github/license/MinerBigWhale/orange-flybox-monitor) 
-![Version](https://img.shields.io/github/commit-activity/y/MinerBigWhale/orange-flybox-monito)
+![license](https://img.shields.io/github/license/MinerBigWhale/Orange-FlyBox-Dashboard/) 
+![Version](https://img.shields.io/github/commit-activity/y/MinerBigWhale/Orange-FlyBox-Dashboard/)
 
-![Version](https://img.shields.io/github/contributors/MinerBigWhale/orange-flybox-monito) 
-![Version](https://img.shields.io/github/last-commit/MinerBigWhale/orange-flybox-monitor) 
-![Version](https://img.shields.io/github/package-json/v/stephin007/MinerBigWhale/orange-flybox-monitor) 
-![Build and Deploy](https://github.com/MinerBigWhale/orange-flybox-monitor/workflows/Build%20and%20Deploy/badge.svg)
+![Version](https://img.shields.io/github/contributors/MinerBigWhale/Orange-FlyBox-Dashboard/) 
+![Version](https://img.shields.io/github/last-commit/MinerBigWhale/Orange-FlyBox-Dashboard/) 
+![Version](https://img.shields.io/github/package-json/v/MinerBigWhale/Orange-FlyBox-Dashboard/) 
+![Build and Deploy](https://github.com/MinerBigWhale/Orange-FlyBox-Dashboard/workflows/Build%20and%20Deploy/badge.svg)
 
 Get Monitoring and other info out of the flybox api.
 
@@ -21,10 +21,10 @@ A Next.js App (React on node.js) that display datas from the database.
 ## Screenshots
 Home
 
-![Dashboard](https://github.com/MinerBigWhale/orange-flybox-monitor/raw/master/public/dashboard.png)
+![Dashboard](https://github.com/MinerBigWhale/Orange-FlyBox-Dashboard//raw/main/public/dashboard.png)
 
 ## Installation & Usage 
-[Collector](https://github.com/MinerBigWhale/orange-flybox-monitor/raw/master/collector/README.md)
+[Collector](https://github.com/MinerBigWhale/Orange-FlyBox-Dashboard//raw/main/collector/README.md)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
