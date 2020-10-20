@@ -1,6 +1,7 @@
 
 from influxdb import InfluxDBClient
 from influxdb import SeriesHelper
+from xml.etree import ElementTree
 
 # InfluxDB connections settings
 host = "localhost"
@@ -28,6 +29,25 @@ class CollectorSeriesHelper(SeriesHelper):
         retention_policy = "stats"
         bulk_size = 1 #every 1 are automaticaly send
         autocommit = True
+
+
+class SimpleXmlParser:
+
+    @staticmethod
+    def get_child(element):
+        childs = {}
+        for child in element:
+            if child:
+                childs[child.tag] = SimpleXmlParser.get_child(child)
+            else:
+                childs[child.tag] = child.text
+        return childs
+
+    @staticmethod
+    def parse(text):
+        xml = ElementTree.fromstring(text)
+        return SimpleXmlParser.get_child(xml)
+
 """Starting the loop"""
 while True:
     CollectorSeriesHelper(
