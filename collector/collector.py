@@ -73,8 +73,21 @@ def get_usage():
 
 """Starting the loop"""
 while True:
+    usage = get_usage()
+    limit = get_limit()
+    usage["total"] = usage["download"] + usage["upload"]
+    limit["percent"] = ((usage["download"] + usage["upload"]) / limit["limit"])*100
+    usage["estimated"] = (usage["download"] + usage["upload"]) /usage["duration"] * (31*86400)
+    print(usage)
+    print(limit) 
     CollectorSeriesHelper(
         source="monitoring", 
+        upload=usage["upload"], 
+        download=usage["download"],
+        estimated=usage["estimated"],
+        duration=usage["duration"],
+        percent=limit["percent"],
+        limit=limit["limit"]
         )
     CollectorSeriesHelper.commit()
     print ("ZZzz...")
